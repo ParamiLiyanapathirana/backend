@@ -60,6 +60,17 @@ export class UsersService {
     }
   }
   
+  async findAll(): Promise<User[]> {
+    return this.userModel.find().exec();
+  }
 
-}
+  // Create a new user
+  async create(user: { name: string; email: string; password: string }): Promise<User> {
+    const newUser = new this.userModel(user); // Create a new instance
+    return newUser.save(); // Save to the database
+  }
+    
+  }
+
+
 
