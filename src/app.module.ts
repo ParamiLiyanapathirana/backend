@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { UsersModule } from './users/users.module';
 import { UserService } from './user/user.service';
+import { UserService } from './user/user.service';
 
 @Module({
   imports: [DatabaseModule, UsersModule],
